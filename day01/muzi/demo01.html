@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* h2 {
+      color: red;
+    } */
+    /* class选择器 */
+    .c1 {
+      color: blue;
+    }
+
+    .c2 {
+      font-size: 80px;
+    }
+
+    .c3 {
+      color: red;
+    }
+
+    /* id选择器 */
+    #i1 {
+      color: green;
+    }
+
+    /* id>class>标记选择器 */
+    #i2 {
+      color: red;
+    }
+
+    #i3 {
+      color: green;
+    }
+
+    .c3 {
+      /* color: pink; */
+      color: pink !important;
+      /* !important 强行将优先级设置为最高 */
+    }
+  </style>
+</head>
+
+<body>
+  <h2 class="c1 c2">第一个</h2>
+  <h2 class="c1">第二个</h2>
+  <h2 class="c1">第三个</h2>
+  <h2 id="i3" class="c2">第四个</h2>
+  <!-- id是html标签在页面中的唯一标识符,不可以重复 -->
+  <h2 id="i1">第五个</h2>
+  <h2 id="i2" class="c3">第六个</h2>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex_demo</title>
+</head>
+<style>
+    div {
+        width: 500px;
+        height: 500px;
+        border: 5px solid black;
+        /* 想让哪些元素水平限制，
+        就把它的父元素设置成弹性盒子 */
+
+        display: flex;
+        /* 交叉轴默认方向是从上到下，上边起点，下面终点 */
+        
+        align-items: center;
+        justify-content: center;
+       
+    }
+    h2 {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+    }
+    h3 {
+        width: 100px;
+        height: 120px;
+        background-color: blue;
+
+    }
+    h4 {
+        width: 100px;
+        height: 140px;
+        background-color: yellow;
+        margin-left: 100px;
+    }
+</style>
+<body>
+    <div>
+        <h2></h2>
+        <h3></h3>
+        <h4></h4>
+    </div>
+</body>
+</html>

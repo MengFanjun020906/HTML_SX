@@ -27,6 +27,7 @@
             padding-top: 10px;
             padding-bottom: 10px;
             background-color: white;
+            z-index: 999;
             /* border: 1px solid red; */
 
         }
@@ -94,11 +95,13 @@
         .banner {
             margin-top: 60px;
             position: relative;
+            z-index: 2;
         }
 
         .banner>img {
             width: 100%;
             border-radius: 6px;
+
 
         }
 
@@ -107,7 +110,7 @@
             justify-content: center;
             position: absolute;
             bottom: 12px;
-            left:0;
+            left: 0;
             right: 0;
 
         }
@@ -120,9 +123,107 @@
             border-radius: 5px;
             margin-right: 4px;
         }
+
         .banner>.pointer>.active {
-      background-color: rgb(0, 153, 255);
-    }
+            background-color: red;
+        }
+
+        .choice {
+
+            margin-top: 10px;
+        }
+
+        .choice>.choice-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 6px;
+            color: #504e4a;
+
+        }
+
+        .choice>.choice-title>.right {
+            font-size: 12px;
+            color: #999;
+            border-radius: 5px;
+            border: 1;
+            background-color: white;
+            border-color: gray;
+
+        }
+
+        .choice-box {
+            display: flex;
+            /* 设置图像可以滚动显示 */
+            overflow: scroll;
+        }
+
+        /* 清除滚动条 */
+        .choice-box::-webkit-scrollbar {
+            display: none;
+        }
+
+        .choice-box>.item>span {
+            font-size: 12px;
+            /* 让文本只显示2行,并且超出的部分显示... */
+            overflow: hidden !important;
+            text-overflow: ellipsis !important;
+            -webkit-line-clamp: 2;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            white-space: normal;
+            word-wrap: break-word;
+        }
+
+        .choice-box>.item {
+            display: flex;
+            flex-direction: column;
+            width: 80px;
+            margin-right: 10px;
+        }
+
+        .choice-box>.item>img {
+            width: 80px;
+            border-radius: 8px;
+            margin-bottom: 6px;
+        }
+
+        .choice-box>.item>span {
+            font-size: 12px;
+        }
+
+        .category {
+            /* position: absolute; */
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: white;
+            height: 80px;
+            display: flex;
+            justify-content: space-evenly;
+
+        }
+
+        .category>.item {
+            display: flex;
+            flex-direction: column;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            /* border: 1px solid red; */
+            align-items: center;
+            justify-content: center;
+        }
+
+        .category>.item>span {
+            font-size: 10px;
+
+        }
+
+        .category>.item>i {
+            color: red;
+            font-size: 30px;
+
+        }
     </style>
 </head>
 
@@ -165,9 +266,75 @@
             <span></span>
         </div>
     </div>
-    123 <br> <br><br><br><br><br>
-    123 <br> <br><br><br><br><br>
-    123 <br> <br><br><br><br><br>
+    <div class="category">
+        <div class="item">
+            <i class="fa fa-calendar"></i>
+            <span>每日推荐</span>
+        </div>
+        <div class="item">
+            <i class="fa fa-music"></i>
+            <span>歌单</span>
+        </div>
+        <div class="item">
+            <i class="fa fa-trophy"></i>
+            <span>排行榜</span>
+        </div>
+        <div class="item">
+            <i class="fa fa-bullhorn"></i>
+            <span>电台</span>
+        </div>
+        <div class="item">
+            <i class="fa fa-caret-square-o-right"></i>
+            <span>直播</span>
+        </div>
+        <div class="item">
+            <i class="fa fa-bolt"></i>
+            <span>火前留名</span>
+        </div>
+        <div class="item">
+            <i class="fa fa-comments"></i>
+            <span>畅聊</span>
+        </div>
+    </div>
+    <div class="choice">
+        <div class="choice-title">
+            <span class="left">你的精选歌单</span>
+            <button class="right">查看更多</button>
+        </div>
+        <div class="choice-box">
+            <div class="item">
+                <img src="img/sheet/100.jpeg" alt="">
+                <span>成功人士都在听的歌曲，来看看吧～</span>
+            </div>
+            <div class="item">
+                <img src="img/sheet/10.jpg" alt="">
+                <span>暮然回首，那人却在灯火阑珊处</span>
+            </div>
+            <div class="item">
+                <img src="img/sheet/20.jpg" alt="">
+                <span>温馨的歌曲，适合在家听</span>
+            </div>
+            <div class="item">
+                <img src="img/sheet/30.jpg" alt="">
+                <span>抖音热门歌曲循环</span>
+            </div>
+            <div class="item">
+                <img src="img/sheet/40.jpg" alt="">
+                <span>学习/工作/无聊/必备歌曲</span>
+            </div>
+            <div class="item">
+                <img src="img/sheet/50.jpg" alt="">
+                <span>乘风破浪会有时，直挂云帆济沧海/span>
+            </div>
+            <div class="item">
+                <img src="img/sheet/60.jpg" alt="">
+                <span>赛车爱好者必听歌曲</span>
+            </div>
+        </div>
+    </div>
+    <br> <br><br><br><br><br>
+    <br> <br><br><br><br><br>
+    <br> <br><br><br><br><br>
     123 <br> <br><br><br><br><br>
     123 <br> <br><br><br><br><br>
     123 <br> <br><br><br><br><br>

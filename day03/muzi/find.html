@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.css">
+    <style>
+        .search>img {
+            width: 30px;
+            height: 30px;
+            border: 3px solid gray;
+            border-radius: 18px;
+            margin-left: 10px;
+        }
+
+        .search {
+            position: fixed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            left: 0;
+            right: 0;
+            top: 0;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            background-color: white;
+            /* border: 1px solid red; */
+
+        }
+
+        .search>input {
+
+            /* 搜索放大镜图标 */
+            background-image: url("img/search.png");
+            background-size: 16px 16px;
+            /* background-position: center; */
+
+            background-position-x: 11px;
+            background-position-y: 7px;
+            background-repeat: no-repeat;
+            background-color: #f2f2f2;
+            justify-content: space-evenly;
+
+            border: none;
+            height: 28px;
+            width: 240px;
+            border-radius: 14px;
+            /* 搜夜曲的位置通过padding判断 */
+            padding-left: 30px;
+            margin-left: 10px;
+        }
+
+        .search>fa fa-microphone {
+            width: 20px;
+            height: 20px;
+
+        }
+
+        .tab-bar {
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: white;
+            height: 80px;
+            /* border: 1px solid red; */
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .tab-bar>.item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .tab-bar>.item>i {
+            font-size: 30px;
+        }
+
+        .tab-bar>.item>span {
+            margin-top: 6px;
+            font-size: 14px;
+        }
+
+        .tab-bar>.active {
+            color: red;
+        }
+
+        .banner {
+            margin-top: 60px;
+            position: relative;
+        }
+
+        .banner>img {
+            width: 100%;
+            border-radius: 6px;
+
+        }
+
+        .banner>.pointer {
+            display: flex;
+            justify-content: center;
+            position: absolute;
+            bottom: 12px;
+            left:0;
+            right: 0;
+
+        }
+
+        .banner>.pointer>span {
+            width: 10px;
+            height: 10px;
+            background-color: gray;
+            margin-left: 10px;
+            border-radius: 5px;
+            margin-right: 4px;
+        }
+        .banner>.pointer>.active {
+      background-color: rgb(0, 153, 255);
+    }
+    </style>
+</head>
+
+<body>
+    <div class="search">
+        <i class="fa fa-microphone  fa-lg"></i>
+        <input type="text" placeholder="搜夜曲">
+        <img src="img/song/615.jpg" class="search_input" alt="">
+
+    </div>
+    <div class="tab-bar">
+        <div class="item active">
+            <i class="fa fa-globe"></i>
+            <span>发现</span>
+        </div>
+        <div class="item">
+            <i class="fa fa-video-camera"></i>
+            <span>视频</span>
+        </div>
+        <div class="item">
+            <i class="fa fa-music"></i>
+            <span>我的</span>
+        </div>
+        <div class="item">
+            <i class="fa fa-users"></i>
+            <span>云村</span>
+        </div>
+        <div class="item">
+            <i class="fa fa-user"></i>
+            <span>账号</span>
+        </div>
+    </div>
+    <div class="banner">
+
+        <img src="img/ad/811.jpg" alt="">
+        <div class="pointer">
+            <span></span>
+            <span></span>
+            <span class="active"></span>
+            <span></span>
+        </div>
+    </div>
+    123 <br> <br><br><br><br><br>
+    123 <br> <br><br><br><br><br>
+    123 <br> <br><br><br><br><br>
+    123 <br> <br><br><br><br><br>
+    123 <br> <br><br><br><br><br>
+    123 <br> <br><br><br><br><br>
+    123 <br> <br><br><br><br><br>
+    123 <br> <br><br><br><br><br>
+    123 <br> <br><br><br><br><br>
+</body>
+
+</html>

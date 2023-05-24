@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 正常情况下 块元素默认是垂直从上向下排列的 */
+    /* 但是我们有时候需求块元素水平显示 */
+    /* 
+    把需要水平显示的块元素的父元素设置为弹性盒子
+    弹性盒子内部的元素是弹性子元素
+    弹性子元素有自己的排列方式
+    弹性子元素默认水平排列
+    主轴:默认水平方向从左向右,左边为起点,右边为重点
+    弹性子元素默认沿着主轴从起点向重点排列
+    */
+    /* 正常情况下 块元素默认是垂直从上向下排列的 */
+    /* 但是我们有时候需求块元素水平显示 */
+    /* 
+    把需要水平显示的块元素的父元素设置为弹性盒子
+    弹性盒子内部的元素是弹性子元素
+    弹性子元素有自己的排列方式
+    弹性子元素默认水平排列
+    主轴:默认水平方向从左向右,左边为起点,右边为重点
+    弹性子元素默认沿着主轴从起点向重点排列
+    交叉轴:交叉轴方向跟主轴垂直
+    交叉轴默认方向从上向下,上边为起点,下边为重点
+    不管主轴从左向右还是从右向左交叉轴都是从上向下的
+    不管主轴是从上向下还是从下向上交叉轴都是从左向右的
+    主轴有四个方向交叉轴只有两个方向
+    */
+    .box {
+      width: 500px;
+      height: 500px;
+      border: 5px solid black;
+      /* 设置弹性盒子 display: flex; */
+      display: flex;
+      /* 设置子元素在主轴的排列方式 justify-content */
+      /* justify-content设置弹性盒子垂直居中 */
+      justify-content: center;
+      /* aligm-items设置水平方向居中 */
+      align-items: center;
+      /* 设置主轴的方向 flex-direction */
+      /* 主轴有四个方向: 
+      row左->右  row-reverse右->左 
+      column上->下 column-reverse下->上 */
+      /* flex-direction: row; */
+      /* flex-direction: row-reverse; */
+      flex-direction: column;
+      /* flex-direction: column-reverse; */
+    }
+
+    .red {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+    }
+
+    .green {
+      width: 100px;
+      height: 100px;
+      background-color: green;
+    }
+
+    .blue {
+      width: 100px;
+      height: 100px;
+      background-color: blue;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <div class="red">
+    </div>
+    <div class="green"></div>
+    <div class="blue"></div>
+  </div>
+</body>
+
+</html>
+

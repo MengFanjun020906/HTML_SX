@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      margin: 0;
+    }
+
+    /* 再网页中我们会把html元素想象成一个盒子 */
+    /* 盒子可以设置宽高,外边距,内边距 */
+    .i1 {
+      width: 200px;
+      height: 100px;
+      border: 5px solid red;
+      /* margin-top: 10px; */
+      /* margin-bottom: 20px; */
+      /* margin-left: 30px; */
+      /* margin-right: 40px; */
+      /* 当元素的左右外边距设置为auto可以水平居中 */
+      margin-left: auto;
+      margin-right: auto;
+      /* 上 右 下 左 */
+      margin: 10px 20px 30px 40px;
+      /* 上下  左右 */
+      /* margin: 10px 20px; */
+      /* margin: 10px auto; */
+      /* 上  左右  下 */
+      /* margin: 10px 20px 30px; */
+      /* 上下左右 */
+      margin: 10px;
+    }
+
+    /* 内边距会撑大元素 */
+    .i2 {
+      width: 170px;
+      height: 80px;
+      border: 5px solid red;
+      padding-top: 20px;
+      padding-bottom: 10px;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    /* 普通盒子 */
+    /* 宽 = 设置的宽度 + 左右边框 + 左右内边距 */
+    /* 高 = 设置的高度 + 上下边框 + 上下内边距 */
+    .i3 {
+      width: 200px;
+      height: 100px;
+      border: 5px solid red;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 10px;
+      padding-right: 10px;
+      /* 边框盒子 */
+      /* 宽 = 设置的宽度 */
+      /* 高 = 设置的高度 */
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+    
+<body>
+  <div class="i1"></div>
+  <div class="i2">这里是内容部分</div>
+  <div class="i3">这里是内容部分</div>
+</body>
+
+</html>

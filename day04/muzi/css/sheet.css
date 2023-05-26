@@ -1,0 +1,77 @@
+body{
+    margin: 0px;
+}
+.info{
+    height: 150px;
+    background-color: gray;
+    padding-top: 30px;
+    padding-left: 20px;
+    display: flex;
+}
+
+.info .left img{
+    width: 120px;
+    height: 120px;
+}
+.info .left{
+    position: relative;
+}
+.info .left span {
+    position: absolute;
+    left: 0;
+    top: 10px;
+    background-color: #b94257;
+    color: white;
+    width: 40px;
+    height: 26px;
+    line-height: 26px;
+    /*  */
+    border-radius: 0 13px 13px 0;
+    padding-left: 6px;
+    font-size: 14px;
+  }
+.info .right {
+    margin-left: 10px;
+    /* border: 1px solid red; */
+  }
+  
+  .info .right span {
+    color: white;
+    font-size: 18px;
+  }
+  
+  .info .right div {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .info .right img {
+    width: 30px;
+    height: 30px;
+    border-radius: 20px;
+    margin-right: 6px;
+  }
+  
+  .info .right div span {
+    font-size: 14px;
+    /* border: 1px solid red; */
+  }
+  .info .right .avator .fa{
+    font-size: 16px;
+    color: yellow;
+    position: absolute;
+    left:172px;
+    right:20px;  
+    top:107px;
+
+}
+
+.sheet-list{
+    background-color: gainsboro;
+    font-size: 14px;
+    color: gray;
+    line-height: 30px;
+    padding-left: 10px;
+    
+}

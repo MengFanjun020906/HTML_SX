@@ -1,0 +1,139 @@
+.nav-bar{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    background-color: white;
+    /* border: 1px solid red; */
+    left: 0;
+    right: 0;
+    top: 0;
+    justify-content: space-evenly;
+    z-index: 999;
+    margin-top: 50px;
+}
+.nav-bar>span{
+
+    width: 50px;
+    text-align: center;
+    padding-bottom: 6px;
+    
+}
+.nav-bar>.active
+{
+    border-bottom: 2px solid red;
+    color: red;
+}
+.box{
+    margin-top: 80px;
+}
+.box>.item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.box>.item>img{
+    width: 10px;
+}
+.box>.item>.info{
+    display: flex;
+    flex-direction: column;
+    width: 220px;
+    /* border: 1px solid red; */
+}
+.box>.item>.info>.title{
+    font-size: 14px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+.box>.item>.info>.ps{
+    display: flex;
+} 
+.box>.item>.info>.ps>span:nth-child(1) {
+    color: #ff2721;
+    width: 45px;
+    height: 16px;
+    border: 1px solid #ff2721;
+    border-radius: 6px;
+    font-size: 15px;
+    line-height: 16px;
+    text-align: center;
+    justify-content: center;
+    font-size: 14px;
+} 
+.box>.item>.info>.ps>span:nth-child(2) {
+    width: 70px;
+    font-size: 12px;
+    line-height: 18px;
+    text-align: center;
+    margin-left: 5px;
+} 
+.box>.item>.play{
+    width: 25px;
+    height: 25px;
+    margin-left: 65px;
+    /* border: 1px solid blue; */
+    margin-top: 20px;
+}
+.box>.item>.fa{
+    width: 25px;
+    height: 25px;
+    margin-left: 20px;
+    /* border: 1px solid black; */
+    margin-top: 30px;
+}
+.search {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid red; */
+    left: 0;
+    right: 0;
+    top: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: white;
+    z-index: 999;
+    /* border: 1px solid red; */
+
+}
+.search>input {
+
+    /* 搜索放大镜图标 */
+    background-image: url("../img/search.png");
+    background-size: 16px 16px;
+    /* background-position: center; */
+
+    background-position-x: 10px;
+    background-position-y: 7px;
+    background-repeat: no-repeat;
+    background-color: #f2f2f2;
+    justify-content: space-evenly;
+
+    border: none;
+    height: 28px;
+    width: 240px;
+    border-radius: 14px;
+    /* 搜夜曲的位置通过padding判断 */
+    padding-left: 40px;
+
+
+
+}
+.search>.fa-backward{
+    margin-right: 30px;
+}
+.search>.fa-close{
+    position: relative;
+    right: 30px;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    border: 0;
+    font-size: 5px;
+    background-color: rgb(223, 215, 215);
+    border-radius: 15px;
+    align-items: center;
+    justify-content: center; 
+}

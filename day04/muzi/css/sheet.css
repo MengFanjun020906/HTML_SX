@@ -1,77 +1,182 @@
-body{
-    margin: 0px;
-}
-.info{
-    height: 150px;
-    background-color: gray;
-    padding-top: 30px;
-    padding-left: 20px;
-    display: flex;
+body {
+  margin: 0px;
 }
 
-.info .left img{
-    width: 120px;
-    height: 120px;
+.info {
+  height: 150px;
+  background-color: gray;
+  padding-top: 30px;
+  padding-left: 20px;
+  display: flex;
 }
-.info .left{
-    position: relative;
+
+.info .left img {
+  width: 120px;
+  height: 120px;
 }
+
+.info .left {
+  position: relative;
+}
+
 .info .left span {
-    position: absolute;
-    left: 0;
-    top: 10px;
-    background-color: #b94257;
-    color: white;
-    width: 40px;
-    height: 26px;
-    line-height: 26px;
-    /*  */
-    border-radius: 0 13px 13px 0;
-    padding-left: 6px;
-    font-size: 14px;
-  }
+  position: absolute;
+  left: 0;
+  top: 10px;
+  background-color: #b94257;
+  color: white;
+  width: 40px;
+  height: 26px;
+  line-height: 26px;
+
+  border-radius: 0 13px 13px 0;
+  padding-left: 6px;
+  font-size: 14px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.info .count span {
+  position: absolute;
+  left: 83px;
+  width: 80px;
+  /* border: 1px solid red ; */
+  color: white;
+  display: inline-block;
+  font-size: small;
+}
+
 .info .right {
-    margin-left: 10px;
-    /* border: 1px solid red; */
-  }
-  
-  .info .right span {
-    color: white;
-    font-size: 18px;
-  }
-  
-  .info .right div {
-    display: flex;
-    align-items: center;
-    margin-top: 10px;
-  }
-  
-  .info .right img {
-    width: 30px;
-    height: 30px;
-    border-radius: 20px;
-    margin-right: 6px;
-  }
-  
-  .info .right div span {
-    font-size: 14px;
-    /* border: 1px solid red; */
-  }
-  .info .right .avator .fa{
-    font-size: 16px;
-    color: yellow;
-    position: absolute;
-    left:172px;
-    right:20px;  
-    top:107px;
+  margin-left: 10px;
+  /* border: 1px solid red; */
+}
+
+.info .right .title {
+  font-size: 16px;
+  /* border: 1px solid red; */
+}
+
+.info .right span {
+  margin-left: 0px;
+  margin-right: 0px;
+  color: white;
+  font-size: 18px;
+}
+
+.info .right div {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.info .right img {
+  width: 30px;
+  height: 30px;
+  border-radius: 20px;
+  margin-right: 6px;
+}
+
+.info .right div span {
+  font-size: 14px;
+  /* border: 1px solid red; */
+}
+
+.info .right .avator .fa {
+  font-size: 16px;
+  color: yellow;
+  position: absolute;
+  left: 170px;
+  right: 20px;
+  top: 105px;
 
 }
 
-.sheet-list{
-    background-color: gainsboro;
-    font-size: 14px;
-    color: gray;
-    line-height: 30px;
-    padding-left: 10px;
-    
+.sheet-list {
+  top: 110px;
+  background-color: gainsboro;
+  font-size: 14px;
+  color: gray;
+  line-height: 30px;
+  padding-left: 10px;
+}
+
+.box .item .seq {
+  height: 20px;
+  width: 5px;
+  color: black;
+  font-size: 20px;
+}
+.box{
+  margin-top: 6px;
+}
+.box>.item{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.box>.item>img{
+  width: 10px;
+}
+.box>.item>.info-song>.title{
+  margin-left: 20px;
+
+}
+.box>.item>.info-song{
+  display: flex;
+  flex-direction: column;
+  width: 220px;
+  /* border: 1px solid red; */
+}
+.box>.item>.info-song>.ps{
+  display: flex;
+}
+
+.box>.item>.info-song>.ps>span:nth-child(1) {
+  color: #ff2721;
+  width: 40px;
+  height: 15px;
+  border: 1px solid #ff2721;
+  border-radius: 6px;
+  font-size: 10px;
+  line-height: 15px;
+  text-align: center;
+  justify-content: center;
+  margin-left: 20px;
+  margin-top: 2px;
+} 
+.box>.item>.info-song>.ps>span:nth-child(2) {
+  width: 70px;
+  font-size: 12px;
+  line-height: 18px;
+  text-align: center;
+  margin-left: 5px;
+  color: gray;
+  margin-top: 2px;
+} 
+.box>.item>.info>.title{
+  font-size: 14px;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+.box>.item>.info>.ps{
+  display: flex;
+} 
+.box>.item>.play{
+  width: 25px;
+  height: 25px;
+  margin-left: 65px;
+  /* border: 1px solid blue; */
+  margin-top: 8px;
+}
+.box>.item>.fa{
+  width: 25px;
+  height: 25px;
+  margin-left: 20px;
+  /* border: 1px solid black; */
+  margin-top: 20px;
+}
+hr {
+  border: none; /* 移除默认边框 */
+  height: 1px; /* 设置高度 */
+  background-color: gray; /* 设置背景颜色 */
 }

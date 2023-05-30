@@ -1,0 +1,308 @@
+.search>img {
+    width: 30px;
+    height: 30px;
+    border: 3px solid gray;
+    border-radius: 18px;
+    margin-left: 10px;
+}
+
+.search {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+    right: 0;
+    top: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: white;
+    z-index: 999;
+    /* border: 1px solid red; */
+}
+
+.search>input {
+
+    /* 搜索放大镜图标 */
+    background-image: url("../img/search.png");
+    background-size: 16px 16px;
+    /* background-position: center; */
+
+    background-position-x: 11px;
+    background-position-y: 7px;
+    background-repeat: no-repeat;
+    background-color: #f2f2f2;
+    justify-content: space-evenly;
+
+    border: none;
+    height: 28px;
+    width: 240px;
+    border-radius: 14px;
+    /* 搜夜曲的位置通过padding判断 */
+    padding-left: 30px;
+    margin-left: 10px;
+}
+
+.search>fa fa-microphone {
+    width: 20px;
+    height: 20px;
+
+}
+
+.tab-bar {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    height: 80px;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.tab-bar>.item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.tab-bar>.item>i {
+    font-size: 30px;
+}
+
+.tab-bar>.item>span {
+    margin-top: 6px;
+    font-size: 14px;
+}
+
+.tab-bar>.active {
+    color: red;
+}
+
+.banner {
+    margin-top: 60px;
+    position: relative;
+    z-index: 2;
+}
+
+.banner>img {
+    width: 100%;
+    border-radius: 6px;
+
+
+}
+
+.banner>.pointer {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 12px;
+    left: 0;
+    right: 0;
+
+}
+
+.banner>.pointer>span {
+    width: 10px;
+    height: 10px;
+    background-color: gray;
+    margin-left: 10px;
+    border-radius: 5px;
+    margin-right: 4px;
+}
+
+.banner>.pointer>.active {
+    background-color: red;
+}
+
+.choice {
+
+    margin-top: 10px;
+}
+
+.choice>.choice-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6px;
+    color: #504e4a;
+
+}
+
+.choice>.choice-title>.right {
+    font-size: 12px;
+    color: #999;
+    border-radius: 5px;
+    border: 1;
+    background-color: white;
+    border-color: gray;
+
+}
+
+.choice-box {
+    display: flex;
+    /* 设置图像可以滚动显示 */
+    overflow: scroll;
+}
+
+/* 清除滚动条 */
+.choice-box::-webkit-scrollbar {
+    display: none;
+}
+
+.choice-box>.item>span {
+    font-size: 12px;
+    /* 让文本只显示2行,并且超出的部分显示... */
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    white-space: normal;
+    word-wrap: break-word;
+}
+
+.choice-box>.item {
+    display: flex;
+    flex-direction: column;
+    width: 80px;
+    margin-right: 10px;
+}
+
+.choice-box>.item>img {
+    width: 80px;
+    border-radius: 8px;
+    margin-bottom: 6px;
+}
+
+.choice-box>.item>span {
+    font-size: 12px;
+}
+
+.category {
+    /* position: absolute; */
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    height: 80px;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.category>.item {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    /* border: 1px solid red; */
+    align-items: center;
+    justify-content: center;
+    margin-left: 3px;
+}
+
+.category>.item>span {
+    font-size: 10px;
+
+}
+
+.category>.item>i {
+
+    color: white;
+    font-size: 20px;
+    border: 12px solid red;
+    border-radius: 70px;
+    background-color: red;
+
+}
+
+.story>.story-title {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+    align-items: center;
+    color: #504e4a;
+
+}
+
+.story>.story-title>.fa-play {
+    font-size: 12px;
+    color: #999;
+    border-radius: 5px;
+    border: 1;
+    background-color: white;
+    border-color: gray;
+    padding: 4px;
+
+}
+
+.story-box {
+    margin-top: 10px;
+    flex-direction: column;
+}
+
+.story-box>.item>.cover {
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+}
+
+.story-box>.item>.play {
+    width: 30px;
+    height: 30px;
+    background-color: red;
+    border-radius: 15px;
+    margin-left: 50px;
+
+}
+
+.story-box>.item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.story-box>.item>.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 54px;
+    margin-left: 7px;
+    /* border: 1px solid red; */
+    width: 220px;
+
+}
+
+.story-box>.item>.info>.title>span:nth-child(1) {
+    font-size: 15px;
+}
+
+.story-box>.item>.info>.title>span:nth-child(2) {
+    font-size: 12px;
+    color: gray;
+}
+
+.story-box>.item>.info>.ps {
+    display: flex;
+    align-items: center;
+}
+
+.story-box>.item>.info>.ps>span:nth-child(1) {
+    font-size: 12px;
+    color: red;
+    border: 1px solid red;
+    width: 34px;
+    height: 18px;
+    line-height: 18px;
+    text-align: center;
+    border-radius: 6px;
+    margin-right: 10px;
+}
+
+.story-box>.item>.info>.ps>span:nth-child(2) {
+    font-size: 12px;
+    color: gray;
+}

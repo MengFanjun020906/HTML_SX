@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .img1 {
+            width: 300px;
+            height: 200px;
+        }
+
+        .img1-border {
+            border: 10px solid green;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="i1">
+        这是一个div
+    </div>
+    <img src="./img/ad/811.jpg" class="img1" alt="">
+    <img src="./img/ad/853.jpg" class="img1" alt="">
+    <script>
+        // dom = document obj model
+
+        // document.querySelector() 根据传入的css选择器找到元素
+        var i1 = document.querySelector('#i1');
+        console.log(i1);
+        console.dir(i1)
+        console.log(i1.id)
+        i1.className = 'c1';
+        i1.innerText = '<b>这不是一个div</b>'
+        // i1.innerHTML='<b>这不是一个div</b>'
+        console.log(document.documentElement)
+        console.log(document.head)
+        console.log(document.body)
+        var div1 = document.getElementById('i1')
+        console.log(div1)
+        div1.style.backgroundColor = 'pink'
+        div1.style.fontSize = '30px'
+
+        // getElementsByClassName 通过类名获取元素
+        var imgs = document.getElementsByClassName('img1')
+        console.dir(imgs)
+        var img1 = imgs[0]
+        console.log(img1)
+        img1.src = './img/ad/917.jpg'
+        // 设置元素的类名 
+        // img1.className = 'img1 img1-border'
+        // 由于使用className是字符串操作比较麻烦
+
+        //   所以后来出现了一个新语法classList
+        console.log(img1.classList)
+        // 给元素添加class类名
+        img1.classList.add('img1-border')
+        // 移除元素的class类名
+        // img1.classList.remove('img1-border')
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="i1">
+        <img src="./img/ad/853.jpg" alt="">
+        <h2>
+            这是一个h2
+            <span>这是一个span</span>
+        </h2>
+        <p>这是一个段落</p>
+        <i>
+            这是一个i标签
+        </i>
+    </div>
+    <script>
+        var i1 = document.getElementById('i1');
+        console.log(i1)
+        // 获取i1的子元素
+        console.log('获取i1的子元素')
+        console.log(i1.children)
+        var img1 = i1.children[0]
+        console.log(img1)
+        //获取父元素
+        console.log('获取img的父元素')
+        console.log(img1.parentElement)
+        //获取下一个兄弟元素
+        console.log('获取h2下一个兄弟元素')
+        var h2el = img1.nextElementSibling
+        console.log(h2el)
+        console.log(h2el.parentElement)
+        console.log(h2el.children)
+        //获取上一个兄弟元素
+        console.log('获取h2上一个兄弟元素')
+        console.log(h2el.previousElementSibling)
+    </script>
+</body>
+
+</html>

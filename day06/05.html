@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+    </script>
+    <style>
+        .pic{
+            width: 400px;
+
+        }
+    </style>
+</head>
+<body>
+    <img class="pic" id="img1" src="./img/ad/811.jpg" alt="">
+    <script>
+        // 图片组
+        var imgsSrcs=[
+            './img/ad/853.jpg',
+            './img/ad/902.jpg',
+            './img/ad/903.jpg',
+            './img/ad/917.jpg',
+            './img/ad/918.jpg',
+            './img/ad/811.jpg',
+        ]
+
+        var img1=document.getElementById('img1');
+        var i=0
+        //setInterval(函数，间隔时间),在指定时间内，重复执行指定的函数
+        //间隔单位是毫秒
+        
+        setInterval(function() { 
+            console.log(imgsSrcs[i])
+            img1.src= imgsSrcs[i]
+            console.log(i,'嘿嘿')
+            i++
+            if(i>=imgsSrcs.length){
+                i=0
+            }
+        },1500);
+    </script>
+</body>
+</html>

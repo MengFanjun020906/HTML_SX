@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var arr = ['tom', 'jess', 'spike']
+        for (var i = 0; i < arr.length; i++) {
+            console.log(arr[i])
+        }
+        for (var key in arr) {
+            console.log(key, arr[key])
+        }
+        var user = ['kun', 'capper', 'gui']
+
+        var arrForeach = function () {
+            for (var key in user) {
+                console.log(key, user[key])
+            }
+        }
+
+        console.log(arrForeach())
+        arrForeach()
+        console.log('-------')
+        var foreach=function(a){
+            console.log(a)
+            for(var key in a){
+                console.log(key,a[key])
+            }
+        }
+        foreach(arr)
+        foreach(user)
+        var sum=function(start,end) {
+            console.log(start,end)
+
+            var total=0
+            for(var i = start; i < end; i++){
+                total+=i
+            }
+            console.log(total)
+        }
+        sum(10,99)
+        sum(99,200)
+        //写一个函数，传递半径，返回圆的面积
+        var circle=function(r){
+            console.log('r='+r)
+            var pi=3.14
+            var s=r*r*pi
+            console.log('圆的面积是'+s)
+        }
+        circle(2)
+        //求数组中数字的平均值
+        var arr=[90,271,213,31,43,2,5567,1] 
+        var avg=function(a){
+            var total=0;
+            for(var i=0; i < arr.length; i++){
+                total+=a[i];
+            }
+            return total/arr.length
+
+        }
+        console.log(avg(arr))
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var foreach = function (arr) {
+            for (var key in arr) {
+                console.log(key, arr[key])
+            }
+        }
+        var join = function (arr, sep) {
+            var str = ''
+            for (var i = 0; i < arr.length; i++) {
+                if (i == arr.length - 1) {
+                    str = str + arr[i]
+                } else {
+                    str = str + arr[i] + sep
+                }
+            }
+            console.log(str)
+        }
+        var strArr = ['lr', 'fs', 'ms', 'sm', 'zs']
+        join(strArr, '->') // lr->fs->ms->sm->zs
+        var ArrayUtils = {
+            // 对象的属性值如果是一个函数,我们称之为方法
+            foreach: function (arr) {
+                for (var key in arr) {
+                    console.log(key, arr[key])
+                }
+            },
+
+            join: function (arr, sep) {
+                var str = ''
+                for (var i = 0; i < arr.length; i++) {
+                    if (i == arr.length - 1) {
+                        str = str + arr[i]
+                    } else {
+                        str = str + arr[i] + sep
+                    }
+                }
+                console.log(str)
+            },
+            findIndex: function (arr, num) {
+
+                for (var i = 0; i < arr.length; i++) {
+                    // console.log(arr[i])
+                    if (arr[i] == num) {
+                        return i
+                    }
+                }
+                //如果循环到最后都没有和num相等的值
+                return -1
+            }
+        }
+
+        ArrayUtils.foreach(strArr)
+        ArrayUtils.join(strArr, '->')
+        var numArr = [99, 76, 100, 38, 59]
+
+        var index = ArrayUtils.findIndex(numArr, 100)
+        console.log('---------------------')
+        console.log('其下标是' + index)
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

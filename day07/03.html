@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+<script>
+    var users=[
+        {uname:'tom',age:18,upwd:'111',sex:1},
+        {uname:'jerry',age:18,upwd:'111',sex:1},
+        {uname:'bob',age:18,upwd:'111',sex:0},
+        {uname:'john',age:29,upwd:'222',sex:1},
+        {uname:'winston',age:23,upwd:'111',sex:0},
+    ]
+        // 循环数组
+    users.forEach(function (item) {
+      // item是数组中的每个元素
+      console.log(item)
+    });
+    //find会对数组中的每个函数传递的函数，返回符合条件的第一个元素
+    var user=users.find(function (item) {
+        //console.log(item)
+        return item.uname == ''
+    })
+    console.log(user)
+    var res =users.filter(function (item) {
+        return item.age > 20
+    })
+
+    console.log(res)
+    var res=users.some(function (item) {
+        console.log(item)
+        return item.age>20
+    })
+    
+</script>
+</body>
+</html> 

@@ -14,8 +14,8 @@
 
     <div class="search">
         <i class="fa fa-microphone  fa-lg"></i>
-        <input type="text" placeholder="搜夜曲">
-        <img src="img/song/615.jpg" class="search_input" alt="">
+        <input type="text" placeholder="搜夜曲" id="searchStr">
+        <img src="img/song/615.jpg" class="search_input" alt="" onclick="goToSearch()">
 
     </div>
 
@@ -238,6 +238,7 @@
                 }
             ]
 
+
             // 生成一个dom
             // var h1el=document.createElement('h1')
             // h1el.innerText = '推荐歌单'
@@ -254,7 +255,7 @@
                 // 3. 设置歌单元素的内容
                 divel.innerHTML = `
 				<div class="item" >
-					<img src="${sheet.pic}" alt="">
+					<img src="${sheet.pic}" alt="" onclick="goToSheet(${sheet.sid})">
 					<span>${sheet.comment}</span>
 				</div>
 			`
@@ -262,6 +263,9 @@
                 // 4. 把歌单元素添加到父元素中
                 choiceEl.appendChild(divel)
             }
+            var goToSheet = function (sid) {
+			location.href = './sheet.html?sid=' + sid
+		}
 
             // 歌曲列表
             let songs = [
@@ -369,11 +373,22 @@
 						<span>${song.title}</span>
 					</div>
 				</div>
-				<img class="play" src="./img/_play.png" alt="">
+				<img class="play" src="./img/_play.png" onclick="goToSong(${song.sid})" alt="">
 			`
 			// 5. 把歌曲元素添加到父元素中
 			narrateEL.appendChild(divel)
+
+
 		}
+        var goToSong = function (sid) {
+			window.location.href = './song-info.html?sid=' + sid
+		}
+        var searchStr=document.querySelector('#searchStr')
+        var goToSearch = function () {
+			// console.log(searchStr.value)
+			location.href = './search.html?searchStr=' + searchStr.value
+		}
+        
         </script>
 </body>
 

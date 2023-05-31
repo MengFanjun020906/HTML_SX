@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!-- onclick 点击事件  在点击元素时会触发绑定的函数 -->
+  <button onclick="goToIndex()">btn1</button>
+  <button id="btn">btn2</button>
+  <script>
+    var goToIndex = function () {
+      // ?sid=1 传参
+      location.href = "./02.html?sid=1";
+    }
+    var btn = document.getElementById('btn')
+    console.log(btn)
+    btn.onclick = function () {
+      location.href = "./02.html?sid=2";
+    }
+  </script>
+</body>
+</html>

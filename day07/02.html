@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>02.html</h2>
+    <script>
+        // 获取到地址栏中的参数 ?sid=1
+        var url = location.search
+        console.log(url)
+        // slice() 去掉字符串前面的问号 sid=1
+        url = url.slice(1)
+        console.log(url.split('=')) // ['sid', '1']
+        var sid = url.split('=')[1]
+        console.log(sid)
+    </script>
+</body>
+
+</html>

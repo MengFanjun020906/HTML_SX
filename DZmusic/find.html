@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find</title>
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="css/find.css">
+    <script>
+		document.documentElement.style.fontSize = window.screen.width / 10 + 'px'
+	</script>
+</head>
+
+<body>
+
+    <div class="search">
+        <i class="fa fa-microphone  fa-lg"></i>
+        <input type="text" placeholder="搜夜曲" id="searchStr">
+        <img src="img/song/615.jpg" class="search_input" alt="" onclick="goToSearch()">
+
+    </div>
+
+    <div class="banner">
+
+        <div class="imgs">
+            <img src="" alt="">
+        </div>
+
+        <div class="pointer">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <div class="category">
+        <div class="item">
+            <i class="fa fa-calendar"></i>
+            <span>每日推荐</span>
+        </div>
+        <div class="item">
+            <i class="fa fa-headphones"></i>
+            <span>歌单</span>
+        </div>
+        <div class="item">
+            <i class="fa fa-trophy"></i>
+            <span>排行榜</span>
+        </div>
+        <div class="item">
+            <i class="fa fa-bullhorn"></i>
+            <span>电台</span>
+        </div>
+        <div class="item">
+            <i class="fa fa-caret-square-o-right"></i>
+            <span>直播</span>
+        </div>
+        <div class="item">
+            <i class="fa fa-heart"></i>
+            <span>火前留名</span>
+        </div>
+        <div class="item">
+            <i class="fa fa-comments"></i>
+            <span>畅聊</span>
+        </div>
+    </div>
+    <div class="choice">
+        <div class="choice-title">
+            <span class="left">你的精选歌单</span>
+            <button class="right">查看更多</button>
+        </div>
+        <div class="choice-box">
+            <!-- <div class="item">
+                <img src="img/sheet/100.jpeg" alt="">
+                <span>成功人士都在听的歌曲，来看看吧～</span>
+            </div>
+            <div class="item">
+                <img src="img/sheet/10.jpg" alt="">
+                <span>暮然回首，那人却在灯火阑珊处</span>
+            </div>
+            <div class="item">
+                <img src="img/sheet/20.jpg" alt="">
+                <span>温馨的歌曲，适合在家听</span>
+            </div>
+            <div class="item">
+                <img src="img/sheet/30.jpg" alt="">
+                <span>抖音热门歌曲循环</span>
+            </div>
+            <div class="item">
+                <img src="img/sheet/40.jpg" alt="">
+                <span>学习/工作/无聊/必备歌曲</span>
+            </div>
+            <div class="item">
+                <img src="img/sheet/50.jpg" alt="">
+                <span>乘风破浪会有时，直挂云帆济沧海/span>
+            </div>
+            <div class="item">
+                <img src="img/sheet/60.jpg" alt="">
+                <span>赛车爱好者必听歌曲</span> -->
+        </div>
+    </div>
+    </div>
+    <div class="story">
+        <div class="story-title">
+            <span class="left">他们把故事唱成了歌曲</span>
+
+            <button class="fa fa-play"> 播放全部</button>
+        </div>
+        <div class="story-box">
+            <!-- <div class="item">
+
+                <img class="cover" src="img/song/917.jpg" alt="">
+                <div class="info">
+                    <div class="title">
+                        <span>就忘了吧(DJ版)</span>
+                        <span>-DJ蛇哥</span>
+                    </div>
+                    <div class="ps">
+                        <span>SQ</span>
+                        <span>永远记得你穿豆豆鞋的样子</span>
+                    </div>
+                </div>
+                <img class="play" src="img/_play.png" alt="">
+            </div>
+            <div class="item">
+
+                <img class="cover" src="img/song/980.jpg" alt="">
+                <div class="info">
+                    <div class="title">
+                        <span>ヨアソビ</span>
+                        <span>-YOASOBI</span>
+                    </div>
+                    <div class="ps">
+                        <span>SQ</span>
+                        <span>将小说故事音乐化</span>
+                    </div>
+                </div>
+                <img class="play" src="img/_play.png" alt="">
+            </div>
+            <div class="item">
+
+                <img class="cover" src="img/song/903.jpg" alt="">
+                <div class="info">
+                    <div class="title">
+                        <span>像风一样</span>
+                        <span>-薛之谦</span>
+                    </div>
+                    <div class="ps">
+                        <span>SQ</span>
+                        <span>希望你像风一样自由</span>
+                    </div>
+                </div>
+                <img class="play" src="img/_play.png" alt="">
+            </div> -->
+        </div>
+        <div class="tab-bar">
+            <div class="item active">
+                <i class="fa fa-globe"></i>
+                <span>发现</span>
+            </div>
+            <div class="item">
+                <i class="fa fa-video-camera"></i>
+                <span>视频</span>
+            </div>
+            <div class="item">
+                <i class="fa fa-music"></i>
+                <span>我的</span>
+            </div>
+            <div class="item">
+                <i class="fa fa-users"></i>
+                <span>云村</span>
+            </div>
+            <div class="item">
+                <i class="fa fa-user" onclick="goToUser()"></i>
+                <span>账号</span>
+            </div>
+        </div>
+        <br> <br><br><br><br><br>
+        <script>
+            // 轮播图
+            var imgs = [
+                './img/ad/853.jpg',
+                './img/ad/902.jpg',
+                './img/ad/903.jpg',
+                './img/ad/811.jpg',
+            ]
+
+            var imgEl = document.querySelector('.banner .imgs img')
+            var pspans = document.querySelectorAll('.banner .pointer span')
+            var i = 0
+            imgEl.src = imgs[i]
+            // 给选中的点一个active属性
+            pspans[i].className = 'active'
+            setInterval(function () {
+                // 设置前一个红色的的为白色
+                pspans[i].className = '' // i = 2
+                i++;
+                if (i == imgs.length) {
+                    i = 0
+                }
+                imgEl.src = imgs[i] // 1 = 3
+                pspans[i].className = 'active' // i = 3
+            }, 1500);
+
+            // 歌单  
+            var sheets = [{
+                    "sid": 10,
+                    "title": "国风伤感",
+                    "user_id": 4,
+                    "pic": "img/sheet/10.jpg",
+                    "comment": "如今的念头，是去很远的地方，饮马曳落河，拄剑拖月山"
+                },
+                {
+                    "sid": 20,
+                    "title": "治愈系指南",
+                    "user_id": 4,
+                    "pic": "img/sheet/20.jpg",
+                    "comment": "微风吹来丝丝秋意,月亮照出梦的甜蜜,亲爱的朋友"
+                },
+                {
+                    "sid": 30,
+                    "title": "抖音BGM签收",
+                    "user_id": 1,
+                    "pic": "img/sheet/30.jpg",
+                    "comment": "善待自己，从心开始。眼里的世界，从来只是表象"
+                },
+                {
+                    "sid": 40,
+                    "title": "发光自习室",
+                    "user_id": 1,
+                    "pic": "img/sheet/40.jpg",
+                    "comment": "每到学习时间，所有的压力都接踵而至。此张歌单送给正在努力学习的你"
+                },
+                {
+                    "sid": 50,
+                    "title": "古风纯音",
+                    "user_id": 2,
+                    "pic": "img/sheet/50.jpg",
+                    "comment": "情愫始自少年时，簪缨结发两相知。年年灼灼艳桃李，结发簪花配君子"
+                }
+            ]
+
+
+            // 生成一个dom
+            // var h1el=document.createElement('h1')
+            // h1el.innerText = '推荐歌单'
+
+
+            var choiceEl = document.querySelector('.choice-box')
+            console.log(choiceEl)
+            for (var sheet of sheets) {
+                console.log(sheet.pic)
+                // 2. 生成每一个歌单元素
+                var divel = document.createElement('div')
+                // `` 反引号 是模板字符串
+                // 模板字符串中可以使用 ${} 来引用变量
+                // 3. 设置歌单元素的内容
+                divel.innerHTML = `
+				<div class="item" >
+					<img src="${sheet.pic}" alt="" onclick="goToSheet(${sheet.sid})">
+					<span>${sheet.comment}</span>
+				</div>
+			`
+                // appendChild 添加一个子元素
+                // 4. 把歌单元素添加到父元素中
+                choiceEl.appendChild(divel)
+            }
+            var goToSheet = function (sid) {
+			location.href = './sheet.html?sid=' + sid
+		}
+
+            // 歌曲列表
+            let songs = [
+			{
+				"sid": 1,
+				"title": "TBD",
+				"singer": "David",
+				"cover": "img/song/615.jpg",
+				"url": "audio/615.mp3"
+			},
+			{
+				"sid": 2,
+				"title": "出头天",
+				"singer": "五月天",
+				"cover": "img/song/618.jpg",
+				"url": "audio/618.mp3"
+			},
+			{
+				"sid": 3,
+				"title": "刚刚好",
+				"singer": "薛之谦",
+				"cover": "img/song/781.jpg",
+				"url": "audio/781.mp3"
+			},
+			{
+				"sid": 4,
+				"title": "你不是真正的快乐",
+				"singer": "邓紫棋",
+				"cover": "img/song/796.jpg",
+				"url": "audio/796.mp3"
+			},
+			{
+				"sid": 5,
+				"title": "绅士",
+				"singer": "薛之谦",
+				"cover": "img/song/801.jpg",
+				"url": "audio/801.mp3"
+			},
+			{
+				"sid": 6,
+				"title": "天外来物",
+				"singer": "薛之谦",
+				"cover": "img/song/805.jpg",
+				"url": "audio/805.mp3"
+			},
+			{
+				"sid": 7,
+				"title": "突然好想你",
+				"singer": "五月天",
+				"cover": "img/song/809.jpg",
+				"url": "audio/809.mp3"
+			},
+			{
+				"sid": 8,
+				"title": "我不愿让你一个人",
+				"singer": "五月天",
+				"cover": "img/song/813.jpg",
+				"url": "audio/813.mp3"
+			},
+			{
+				"sid": 9,
+				"title": "我心中的尚未崩坏的地方",
+				"singer": "五月天",
+				"cover": "img/song/821.jpg",
+				"url": "audio/821.mp3"
+			},
+			{
+				"sid": 10,
+				"title": "想见你想见你想见你",
+				"singer": "八三夭",
+				"cover": "img/song/900.jpg",
+				"url": "audio/900.mp3"
+			},
+			{
+				"sid": 11,
+				"title": "像风一样",
+				"singer": "薛之谦",
+				"cover": "img/song/903.jpg",
+				"url": "audio/903.mp3"
+			},
+			{
+				"sid": 12,
+				"title": "这就是爱",
+				"singer": "张杰",
+				"cover": "img/song/905.jpg",
+				"url": "audio/905.mp3"
+			}
+		]
+        let narrateEL = document.querySelector('.story-box')
+		for (var song of songs) {
+			// 2. 生成每一个歌曲元素
+			var divel = document.createElement('div')
+			// 3. 给歌曲元素添加类名
+			divel.className = 'item'
+			// 4. 设置歌曲元素的内容
+			divel.innerHTML = `
+				<img class="cover" src="${song.cover}" alt="">
+				<div class="info">
+					<div class="title">
+						<span>${song.title}</span>
+						<span>-${song.singer}</span>
+					</div>
+					<div class="ps">
+						<span>SQ</span>
+						<span>${song.title}</span>
+					</div>
+				</div>
+				<img class="play" src="./img/_play.png" onclick="goToSong(${song.sid})" alt="">
+			`
+			// 5. 把歌曲元素添加到父元素中
+			narrateEL.appendChild(divel)
+
+
+		}
+        var goToSong = function (sid) {
+			window.location.href = './song-info.html?sid=' + sid
+		}
+
+        var searchStr=document.querySelector('#searchStr')
+        
+        var goToSearch = function () {
+			// console.log(searchStr.value)
+			location.href = './search.html?searchStr=' + searchStr.value
+		}
+        var goToUser = function () {
+			location.href = './user.html'
+		}
+        
+        </script>
+</body>
+
+</html>

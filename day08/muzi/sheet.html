@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="css/sheet.css">
+    <title>sheet</title>
+    <script>
+		document.documentElement.style.fontSize = window.screen.width / 10 + 'px'
+	</script>
+</head>
+
+<body>
+    <div class="info">
+        <div class="left">
+            <img src="img/sheet/100.jpeg" alt="">
+            <span>歌单</span>
+        </div>
+        <div class="count">
+            <span class="fa fa-play">114万次</span>
+        </div>
+        <div class="right">
+            <span class="title">
+                这就是顶级的音乐吗,让我沉浸其中
+            </span>
+            <div class="avator">
+
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="sheet-list">
+        歌曲列表
+    </div>
+    <div class="tab-bar">
+        <div class="item active" onclick="goToFind()">
+            <i class="fa fa-globe"></i>
+            <span>发现</span>
+        </div>
+        <div class="item">
+            <i class="fa fa-video-camera"></i>
+            <span>视频</span>
+        </div>
+        <div class="item">
+            <i class="fa fa-music"></i>
+            <span>我的</span>
+        </div>
+        <div class="item">
+            <i class="fa fa-users"></i>
+            <span>云村</span>
+        </div>
+        <div class="item">
+            <i class="fa fa-user" onclick="goToUser()"></i>
+            <span>账号</span>
+        </div>
+    </div>
+
+    <div class="box">
+        <!-- <div class="item">
+            <div class="seq">1</div>
+            <div class="info-song">
+                <div class="title">时间流逝</div>
+                <div class="ps">
+                    <span>原创</span>
+                    <span>翻唱-胡老师</span>
+                </div>
+            </div>
+            <img class="play" src="img/youtube.png" alt="">
+            <i class="fa fa-ellipsis-v"></i>
+        </div>
+        <hr>
+
+        <div class="item">
+            <div class="seq">2</div>
+            <div class="info-song">
+                <div class="title">时间流逝</div>
+                <div class="ps">
+                    <span>原创</span>
+                    <span>翻唱-胡老师</span>
+                </div>
+            </div>
+            <img class="play" src="img/youtube.png" alt="">
+            <i class="fa fa-ellipsis-v"></i>
+        </div>
+
+        <hr>
+
+        <div class="item">
+            <div class="seq">3</div>
+            <div class="info-song">
+                <div class="title">时间流逝</div>
+                <div class="ps">
+                    <span>原创</span>
+                    <span>翻唱-胡老师</span>
+                </div>
+            </div>
+            <img class="play" src="img/youtube.png" alt="">
+            <i class="fa fa-ellipsis-v"></i>
+        </div>
+        <hr>
+
+        <div class="item">
+            <div class="seq">4</div>
+            <div class="info-song">
+                <div class="title">时间流逝</div>
+                <div class="ps">
+                    <span>原创</span>
+                    <span>翻唱-胡老师</span>
+                </div>
+            </div>
+            <img class="play" src="img/youtube.png" alt="">
+            <i class="fa fa-ellipsis-v"></i>
+        </div>
+        <hr>
+
+        <div class="item">
+            <div class="seq">5</div>
+            <div class="info-song">
+                <div class="title">时间流逝</div>
+                <div class="ps">
+                    <span>原创</span>
+                    <span>翻唱-胡老师</span>
+                </div>
+            </div>
+            <img class="play" src="img/youtube.png" alt="">
+            <i class="fa fa-ellipsis-v"></i>
+        </div>
+        <hr>
+
+        <div class="item">
+            <div class="seq">6</div>
+            <div class="info-song">
+                <div class="title">时间流逝</div>
+                <div class="ps">
+                    <span>原创</span>
+                    <span>翻唱-胡老师</span>
+                </div>
+            </div>
+            <img class="play" src="img/youtube.png" alt="">
+            <i class="fa fa-ellipsis-v"></i>
+        </div>
+        <hr>
+
+        <div class="item">
+            <div class="seq">7</div>
+            <div class="info-song">
+                <div class="title">时间流逝</div>
+                <div class="ps">
+                    <span>原创</span>
+                    <span>翻唱-胡老师</span>
+                </div>
+            </div>
+            <img class="play" src="img/youtube.png" alt="">
+            <i class="fa fa-ellipsis-v"></i>
+        </div> -->
+    </div>
+
+
+
+    <script>
+        // 1. 获取歌单的id
+        // ?sid=10
+        var url = location.search
+        url = url.slice(1)
+        var params = new URLSearchParams(url)
+        console.log(params.get('sid'))
+        var sid = params.get('sid')
+
+        var songSheets = [{
+                "sid": 10,
+                "title": "国风伤感",
+                "user_id": 4,
+                "pic": "img/sheet/10.jpg",
+                "comment": "如今的念头，是去很远的地方，饮马曳落河，拄剑拖月山"
+            },
+            {
+                "sid": 20,
+                "title": "治愈系指南",
+                "user_id": 4,
+                "pic": "img/sheet/20.jpg",
+                "comment": "微风吹来丝丝秋意,月亮照出梦的甜蜜,亲爱的朋友"
+            },
+            {
+                "sid": 30,
+                "title": "抖音BGM签收",
+                "user_id": 1,
+                "pic": "img/sheet/30.jpg",
+                "comment": "善待自己，从心开始。眼里的世界，从来只是表象"
+            },
+            {
+                "sid": 40,
+                "title": "发光自习室",
+                "user_id": 1,
+                "pic": "img/sheet/40.jpg",
+                "comment": "每到学习时间，所有的压力都接踵而至。此张歌单送给正在努力学习的你"
+            },
+            {
+                "sid": 50,
+                "title": "古风纯音",
+                "user_id": 2,
+                "pic": "img/sheet/50.jpg",
+                "comment": "情愫始自少年时，簪缨结发两相知。年年灼灼艳桃李，结发簪花配君子"
+            }
+        ]
+
+        // 2. 根据id获取歌单信息
+        var sheet = songSheets.find(function (item) {
+            return item.sid == sid
+        })
+        console.log(sheet)
+
+        // 3. 显示歌单信息
+        var infoImg = document.querySelector('.info .left img')
+        infoImg.src = sheet.pic
+        var infoTitle = document.querySelector('.info .right .title')
+        var infoAuthor = document.querySelector('.info .right .avator span')
+        infoTitle.innerHTML = sheet.title
+        infoAuthor.innerHTML = sheet.comment
+
+
+        var sheetSongList = [{
+                "iid": 1,
+                "sheet_id": 10,
+                "song_id": 3,
+                "play_count": 55
+            },
+            {
+                "iid": 2,
+                "sheet_id": 10,
+                "song_id": 5,
+                "play_count": 15
+            },
+            {
+                "iid": 3,
+                "sheet_id": 10,
+                "song_id": 9,
+                "play_count": 128
+            },
+            {
+                "iid": 4,
+                "sheet_id": 10,
+                "song_id": 10,
+                "play_count": 135
+            },
+            {
+                "iid": 5,
+                "sheet_id": 10,
+                "song_id": 12,
+                "play_count": 63
+            },
+            {
+                "iid": 6,
+                "sheet_id": 20,
+                "song_id": 1,
+                "play_count": 13
+            },
+            {
+                "iid": 7,
+                "sheet_id": 20,
+                "song_id": 2,
+                "play_count": 18
+            },
+            {
+                "iid": 8,
+                "sheet_id": 20,
+                "song_id": 5,
+                "play_count": 31
+            },
+            {
+                "iid": 9,
+                "sheet_id": 20,
+                "song_id": 9,
+                "play_count": 11
+            },
+            {
+                "iid": 10,
+                "sheet_id": 20,
+                "song_id": 11,
+                "play_count": 101
+            },
+            {
+                "iid": 11,
+                "sheet_id": 30,
+                "song_id": 2,
+                "play_count": 1234
+            },
+            {
+                "iid": 12,
+                "sheet_id": 30,
+                "song_id": 4,
+                "play_count": 10
+            },
+            {
+                "iid": 13,
+                "sheet_id": 30,
+                "song_id": 5,
+                "play_count": 3
+            },
+            {
+                "iid": 14,
+                "sheet_id": 30,
+                "song_id": 6,
+                "play_count": 108
+            },
+            {
+                "iid": 15,
+                "sheet_id": 30,
+                "song_id": 7,
+                "play_count": 281
+            },
+            {
+                "iid": 16,
+                "sheet_id": 40,
+                "song_id": 2,
+                "play_count": 218
+            },
+            {
+                "iid": 17,
+                "sheet_id": 40,
+                "song_id": 8,
+                "play_count": 313
+            },
+            {
+                "iid": 18,
+                "sheet_id": 40,
+                "song_id": 9,
+                "play_count": 881
+            },
+            {
+                "iid": 19,
+                "sheet_id": 40,
+                "song_id": 10,
+                "play_count": 912
+            },
+            {
+                "iid": 20,
+                "sheet_id": 40,
+                "song_id": 11,
+                "play_count": 81
+            },
+            {
+                "iid": 21,
+                "sheet_id": 40,
+                "song_id": 12,
+                "play_count": 65
+            },
+            {
+                "iid": 22,
+                "sheet_id": 40,
+                "song_id": 3,
+                "play_count": 1365
+            },
+            {
+                "iid": 23,
+                "sheet_id": 50,
+                "song_id": 1,
+                "play_count": 812
+            },
+            {
+                "iid": 24,
+                "sheet_id": 50,
+                "song_id": 3,
+                "play_count": 123
+            },
+            {
+                "iid": 25,
+                "sheet_id": 50,
+                "song_id": 4,
+                "play_count": 181
+            },
+            {
+                "iid": 26,
+                "sheet_id": 50,
+                "song_id": 5,
+                "play_count": 1
+            },
+            {
+                "iid": 27,
+                "sheet_id": 50,
+                "song_id": 7,
+                "play_count": 702
+            },
+            {
+                "iid": 28,
+                "sheet_id": 50,
+                "song_id": 8,
+                "play_count": 1182
+            },
+            {
+                "iid": 29,
+                "sheet_id": 50,
+                "song_id": 11,
+                "play_count": 1002
+            }
+        ]
+
+        // 根据歌单id获取歌曲id列表
+        var songIdList = sheetSongList.filter(function (item) {
+            return item.sheet_id == sid
+        })
+        console.log(songIdList)
+
+        var songs = [{
+                "sid": 1,
+                "title": "TBD",
+                "singer": "David",
+                "cover": "img/song/615.jpg",
+                "url": "audio/615.mp3"
+            },
+            {
+                "sid": 2,
+                "title": "出头天",
+                "singer": "五月天",
+                "cover": "img/song/618.jpg",
+                "url": "audio/618.mp3"
+            },
+            {
+                "sid": 3,
+                "title": "刚刚好",
+                "singer": "薛之谦",
+                "cover": "img/song/781.jpg",
+                "url": "audio/781.mp3"
+            },
+            {
+                "sid": 4,
+                "title": "你不是真正的快乐",
+                "singer": "邓紫棋",
+                "cover": "img/song/796.jpg",
+                "url": "audio/796.mp3"
+            },
+            {
+                "sid": 5,
+                "title": "绅士",
+                "singer": "薛之谦",
+                "cover": "img/song/801.jpg",
+                "url": "audio/801.mp3"
+            },
+            {
+                "sid": 6,
+                "title": "天外来物",
+                "singer": "薛之谦",
+                "cover": "img/song/805.jpg",
+                "url": "audio/805.mp3"
+            },
+            {
+                "sid": 7,
+                "title": "突然好想你",
+                "singer": "五月天",
+                "cover": "img/song/809.jpg",
+                "url": "audio/809.mp3"
+            },
+            {
+                "sid": 8,
+                "title": "我不愿让你一个人",
+                "singer": "五月天",
+                "cover": "img/song/813.jpg",
+                "url": "audio/813.mp3"
+            },
+            {
+                "sid": 9,
+                "title": "我心中的尚未崩坏的地方",
+                "singer": "五月天",
+                "cover": "img/song/821.jpg",
+                "url": "audio/821.mp3"
+            },
+            {
+                "sid": 10,
+                "title": "想见你想见你想见你",
+                "singer": "八三夭",
+                "cover": "img/song/900.jpg",
+                "url": "audio/900.mp3"
+            },
+            {
+                "sid": 11,
+                "title": "像风一样",
+                "singer": "薛之谦",
+                "cover": "img/song/903.jpg",
+                "url": "audio/903.mp3"
+            },
+            {
+                "sid": 12,
+                "title": "这就是爱",
+                "singer": "张杰",
+                "cover": "img/song/905.jpg",
+                "url": "audio/905.mp3"
+            }
+        ]
+        // 根据歌曲id列表获取歌曲列表
+        var songList = songs.filter(function (item) {
+            var res = songIdList.some(function (value) {
+                return value.song_id == item.sid
+            })
+            return res
+        })
+        console.log(songList)
+        var songListel = document.querySelector('.box')
+        var i = 1;
+        for (var song of songList) {
+            var divel = document.createElement('div')
+            divel.className = 'item'
+            divel.innerHTML = `
+        <div class="seq">${i}</div>
+        <div class="info-song">
+                <div class="title">${song.title}</div>
+                <div class="ps">
+                    <span>原创</span>
+                    <span>翻唱-${song.singer}</span>
+                </div>
+            </div>
+            <img class="play" src="img/youtube.png" alt="" onclick="goToSong(${song.sid})">
+            <i class="fa fa-ellipsis-v"></i>
+
+            
+      `
+            songListel.appendChild(divel)
+            i++
+        }
+
+
+        console.log(songList)
+
+        var goToSong = function (sid) {
+            window.location.href = './song-info.html?sid=' + sid
+        }
+        var goToFind = function () {
+            window.location.href = "find.html";
+        }
+        var goToUser = function () {
+            location.href = './user.html'
+        }
+    </script>
+
+</body>
+
+</html>

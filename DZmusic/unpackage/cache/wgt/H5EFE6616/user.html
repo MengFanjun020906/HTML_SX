@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+
+    <link rel="stylesheet" href="./font-awesome-4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="./css/user.css" />
+    <title>user</title>
+    <script>
+		document.documentElement.style.fontSize = window.screen.width / 10 + 'px'
+	</script>
+    <script>
+        // 获取uid
+        var uid = localStorage.getItem("uid");
+        console.log(uid)
+        // 登录条件判断 
+        // null 在if判断中为false
+        // !取反   !false = true
+        if (!uid) {
+            location.href = "./login.html";
+        }
+    </script>
+</head>
+
+
+<div class="info">
+    
+        <img class="avatar" src="img/user/101.jpg" alt="">
+        <span class="uname">猴子大王</span>
+    
+</div>
+
+<div class="out">
+    <button onclick="out()">退出登录</button>
+</div>
+<div class="tab-bar">
+    <div class="item">
+        <i class="fa fa-globe" onclick="goToFind()"></i>
+        <span>发现</span>
+    </div>
+    <div class="item">
+        <i class="fa fa-video-camera"></i>
+        <span>视频</span>
+    </div>
+    <div class="item">
+        <i class="fa fa-music"></i>
+        <span>我的</span>
+    </div>
+    <div class="item">
+        <i class="fa fa-users"></i>
+        <span>云村</span>
+    </div>
+    <div class="item active">
+        <i class="fa fa-user"></i>
+        <span>账号</span>
+    </div>
+</div>
+
+<script>
+    var users = [{
+            "uid": 1,
+            "phone": "123",
+            "upwd": "123",
+            "avatar": "img/user/101.jpg"
+        },
+        {
+            "uid": 2,
+            "phone": "456",
+            "upwd": "456",
+            "avatar": "img/user/102.jpg"
+        },
+        {
+            "uid": 3,
+            "phone": "789",
+            "upwd": "789",
+            "avatar": "img/user/103.jpg"
+        },
+        {
+            "uid": 4,
+            "phone": "13501234560",
+            "upwd": "123456",
+            "avatar": "img/user/104.jpg"
+        }
+    ]
+
+    var user = users.find(function (item) {
+            return item.uid == uid;
+        })
+                // 获取uid
+                var uid = localStorage.getItem("uid");
+        console.log(uid)
+        // 登录条件判断 
+        // null 在if判断中为false
+        // !取反   !false = true
+        if (!uid) {
+            location.href = "./login.html";
+        }
+        var avatarEL=document.querySelector('.info .avatar');
+        var phoneEL=document.querySelector('.info span');
+        console.log(avatarEL)
+        console.log(phoneEL.textContent)
+        console.log(avatarEL.src)
+        avatarEL.src = user.avatar
+        phoneEL.textContent = user.phone
+        console.log(user)
+
+    
+
+        var goToFind = function () {
+            window.location.href = "find.html";
+        }
+
+
+        
+        var out = function () {
+            // 清除uid
+            localStorage.removeItem("uid");
+            location.href = "./login.html";
+        }
+
+</script>
+</body>
+
+</html>
